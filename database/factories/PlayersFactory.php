@@ -19,11 +19,10 @@ class PlayersFactory extends Factory
     {
         return [
             'name'=> fake()->text(5),
-            'age'=> fake()->rand(16,65),
+            'age'=> rand(16,60),
             'nationality'=> fake()->country(),
-            'wins' =>fake()->rand(0,30),
-            'defeats' => fake()->rand(0,30),
-            'team' => null,
+            'wins' => rand(0,30),
+            'defeats' => rand(0,30),
         ];
     }
 }

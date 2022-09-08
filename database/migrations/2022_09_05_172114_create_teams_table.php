@@ -21,8 +21,8 @@ return new class extends Migration
             $table->integer('points');
             $table->integer('wins');
             $table->integer('defeats');
-            $table->string('players');
-            $table->string('championships');
+            $table->string('players')->nullable();
+            $table->string('championships')->nullable();
         });
     }
 

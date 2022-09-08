@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('nationality');
             $table->integer('wins');
             $table->integer('defeats');
-            $table->string('team');
+            $table->string('team')->nullable();
         });
     }
 

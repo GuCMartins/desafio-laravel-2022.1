@@ -8,7 +8,7 @@ use Illuminate\Support\Str;
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Model>
  */
-class TeamFactory extends Factory
+class ChampionshipsFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -18,13 +18,8 @@ class TeamFactory extends Factory
     public function definition()
     {
         return [
-            'name'=> fake()->text(5),
-            'motherland' => fake()->country(),
-            'points' => rand(0,30),
-            'wins' => rand(0,10),
-            'defeats' => 10 - 'wins',
-            'players' =>[null],
-            'championships' => [null],
+            'name' => fake()->text(10),
+            'game' => fake()->text(10),
         ];
     }
 }
