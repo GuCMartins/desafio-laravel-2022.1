@@ -15,7 +15,14 @@ class Teams extends Model
         'points',
         'wins',
         'defeats',
-        'players',
-        'champioships',
     ];
+
+    protected $casts = [
+        'players_id' =>'array',
+        'champioship_id' =>'array',
+    ];
+
+    public function player(){
+        $this->hasMany(Players::class);
+    }
 }

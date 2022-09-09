@@ -19,4 +19,9 @@ class Players extends Model
         'defeats',
         'team',
     ];
+
+    public function team(){
+
+        return $this->belongsTo(Teams::class);
+    }
 }

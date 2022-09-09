@@ -16,4 +16,8 @@ class Championships extends Model
         'end date',
         'participant teams',
     ];
+
+    protected $casts = [
+        'participant teams' => 'array',
+    ];
 }
