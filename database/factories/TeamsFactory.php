@@ -24,7 +24,7 @@ class TeamsFactory extends Factory
         $players = Players::all();
         $members = array();
         foreach ( $players as $player){
-            if ($player->team == null && $count<4){
+            if ($player->team == null && $count<3){
                 $player->team = $name;
                 $count = $count + 1;
                 array_push($members, $player->id);

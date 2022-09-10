@@ -18,7 +18,7 @@ return new class extends Migration
             $table->timestamps();
             $table->string('name');
             $table->string('game');
-            $table->string('paticipant teams')->nullable();
+            $table->json('paticipant teams')->nullable();
         });
     }
 
