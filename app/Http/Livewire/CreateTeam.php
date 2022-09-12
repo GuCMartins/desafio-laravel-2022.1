@@ -2,7 +2,6 @@
 
 namespace App\Http\Livewire;
 
-use App\Models\Players;
 use App\Models\Teams;
 use Livewire\Component;
 

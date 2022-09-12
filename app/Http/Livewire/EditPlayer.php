@@ -2,12 +2,13 @@
 
 namespace App\Http\Livewire;
 
-use App\Models\Teams;
 use App\Models\Players;
+use App\Models\Teams;
 use Livewire\Component;
 
-class CreatePlayer extends Component
+class EditPlayer extends Component
 {
+
     public $name;
     public $age;
     public $nationality;
@@ -24,10 +25,23 @@ class CreatePlayer extends Component
         'team' => 'string|required',
     ];
 
-    public function submit(){
-        $this->validate();
+    public function mount(Players $player)
+    {
+        $this->name = $player->name;
+        $this->age = $player->age;
+        $this->nationality = $player->nationality;
+        $this->wins = $player->wins;
+        $this->defeats = $player->defeats;
+        $this->team = $player->team;
+    }
 
-        Players::Create([
+    public function update()
+    {
+        $player = Players::find($this->id);
+
+        $this->validade();
+
+        $player->update([
             'name' => $this->name,
             'age' => $this->age,
             'nationality' => $this->nationality,
@@ -35,10 +49,12 @@ class CreatePlayer extends Component
             'defeats' => $this->defeats,
             'team' => $this->team,
         ]);
+
+        session()->flash('message','Jogador atualizado com suceso'); 
     }
 
     public function render()
     {
-        return view('livewire.create-player');
+        return view('livewire.edit-player')->layout('layouts.master');
     }
 }

@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire;
 
+use App\Models\Teams;
 use Livewire\Component;
 
 class ShowTeams extends Component
@@ -9,6 +10,6 @@ class ShowTeams extends Component
     public function render()
     {
         $teams = Teams::all();
-        return view('livewire.show-teams',compact('teams'));
+        return view('livewire.show-teams',compact('teams'))->layout('layouts.master');
     }
 }

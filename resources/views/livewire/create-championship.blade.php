@@ -1,3 +1,7 @@
-<div>
-    {{-- The Master doesn't talk, he acts. --}}
-</div>
+@extends("layouts.master")
+
+@section('content')
+    <div>
+        {{-- Stop trying to control. --}}
+    </div>
+@endsection    

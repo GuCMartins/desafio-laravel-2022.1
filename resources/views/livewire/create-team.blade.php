@@ -1,3 +1,7 @@
-<div>
-    {{-- If you look to others for fulfillment, you will never truly be fulfilled. --}}
-</div>
+@extends("layouts.master")
+
+@section('content')
+    <div>
+        {{-- Stop trying to control. --}}
+    </div>
+@endsection    
