@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Livewire\CreatePlayer;
+use App\Http\Livewire\CreateTeam;
+use App\Http\Livewire\CreateChampionship;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +19,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/players',ShowPlayers::class);
+Route::get('/new-player',CreatePlayer::class);
+
+Route::get('/teams',ShowTeams::class);
+Route::get('/new-team',CreateTeam::class);
+
+Route::get('/change-team',ShowChampionships::class);
+Route::get('/new-championship',CreateChampionship::class);
