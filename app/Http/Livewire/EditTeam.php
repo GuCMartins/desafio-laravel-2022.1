@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire;
 
+use App\Models\Teams;
 use Livewire\Component;
 
 class EditTeam extends Component
@@ -45,7 +46,7 @@ class EditTeam extends Component
             'team' => $this->team,
         ]);
 
-        session()->flash('team','Time atualizado com suceso'); 
+        session()->flash('team','Time atualizado com sucesso'); 
     }
 
     public function render()

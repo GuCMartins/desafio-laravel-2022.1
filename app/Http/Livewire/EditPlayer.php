@@ -50,11 +50,11 @@ class EditPlayer extends Component
             'team' => $this->team,
         ]);
 
-        session()->flash('message','Jogador atualizado com suceso'); 
+        session()->flash('message','Jogador atualizado com sucesso'); 
     }
 
     public function render()
     {
-        return view('livewire.edit-player')->layout('layouts.master');
+        return view('livewire.edit-player');
     }
 }

@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire;
 
+use App\Models\Teams;
 use Livewire\Component;
 
 class EditChampionship extends Component
@@ -45,7 +46,7 @@ class EditChampionship extends Component
             'team' => $this->team,
         ]);
 
-        session()->flash('team','Campeonato atualizado com suceso'); 
+        session()->flash('team','Campeonato atualizado com sucesso'); 
     }
 
     public function render()
