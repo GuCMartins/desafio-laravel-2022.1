@@ -1,7 +1,8 @@
-@extends("layouts.master")
+@extends('layouts.app')
+@section('title','Players')
 
 @section('content')
     <div>
-        {{-- Stop trying to control. --}}
+        Hello;
     </div>
 @endsection    

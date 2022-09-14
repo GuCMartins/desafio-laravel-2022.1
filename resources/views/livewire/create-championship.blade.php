@@ -1,7 +1,8 @@
-@extends("layouts.master")
+@extends('layouts.app')
+@section('title','New Championship')
 
 @section('content')
     <div>
-        {{-- Stop trying to control. --}}
+        Hello {{$title}};
     </div>
 @endsection    

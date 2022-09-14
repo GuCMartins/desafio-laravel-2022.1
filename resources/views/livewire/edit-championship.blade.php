@@ -1,3 +1,8 @@
-<div>
-    {{-- The best athlete wants his opponent at his best. --}}
-</div>
+@extends('layouts.app')
+@section('title','Edit Championship')
+
+@section('content')
+    <div>
+        Hello;
+    </div>
+@endsection    

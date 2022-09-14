@@ -10,6 +10,6 @@ class ShowChampionships extends Component
     public function render()
     {
         $championships = Championships::all();
-        return view('livewire.show-championships',compact('championships'))->layout('layouts.master');
+        return view('livewire.show-championships',compact('championships'));
     }
 }

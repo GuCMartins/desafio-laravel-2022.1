@@ -26,7 +26,7 @@ class CreateChampionship extends Component
     public function submit(){
         $this->validate();
 
-        Players::Create([
+        Championships::Create([
             'name' => $this->name,
             'game' => $this->game,
             'begin date' => $this->begin_date,

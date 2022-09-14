@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
         <script src="//unpkg.com/alpinejs" defer></script>
+        <title>@yield('title')</title>
         @livewireStyles
     </head>
 

@@ -1,3 +1,7 @@
-<div>
-    {{-- Close your eyes. Count to one. That is how long forever feels. --}}
-</div>
+@extends('layouts.app')
+
+@section('content')
+    <div>
+        Hello {{$title}};
+    </div>
+@endsection    

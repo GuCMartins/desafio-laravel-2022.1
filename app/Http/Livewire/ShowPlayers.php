@@ -10,6 +10,6 @@ class ShowPlayers extends Component
     public function render()
     {
         $players = Players::all();
-        return view('livewire.show-players',compact('players'))->layout('layouts.master');
+        return view('livewire.show-players',compact('players'));
     }
 }

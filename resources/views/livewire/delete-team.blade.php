@@ -1,3 +1,7 @@
-<div>
-    {{-- A good traveler has no fixed plans and is not intent upon arriving. --}}
-</div>
+@extends('layouts.app')
+
+@section('content')
+    <div>
+        Hello ;
+    </div>
+@endsection    

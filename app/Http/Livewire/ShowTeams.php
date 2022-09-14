@@ -7,9 +7,10 @@ use Livewire\Component;
 
 class ShowTeams extends Component
 {
+
     public function render()
     {
         $teams = Teams::all();
-        return view('livewire.show-teams',compact('teams'))->layout('layouts.master');
+        return view('livewire.show-teams',compact('teams'));
     }
 }
