@@ -20,6 +20,8 @@ class ChampionshipsFactory extends Factory
         return [
             'name' => fake()->text(10),
             'game' => fake()->text(10),
+            'begin' => now(),
+            'end' => now(),
         ];
     }
 }

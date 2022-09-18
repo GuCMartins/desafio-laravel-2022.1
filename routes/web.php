@@ -41,7 +41,7 @@ Route::get('/new-team',CreateTeam::class);
 Route::get('/edit-team',EditTeam::class);
 Route::get('/delete-team',DeleteTeam::class);
 
-Route::get('/change-team',ShowChampionships::class);
+Route::get('/championships',ShowChampionships::class);
 Route::get('/new-championship',CreateChampionship::class);
 Route::get('/edit-championship',EditChampionship::class);
 Route::get('/delete-championship',DeleteChampionship::class);

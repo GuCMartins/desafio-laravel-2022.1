@@ -12,8 +12,8 @@ class Championships extends Model
     protected $fillable = [
         'name',
         'game',
-        'begin date',
-        'end date',
+        'begin',
+        'end',
         'participant teams',
     ];
 

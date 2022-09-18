@@ -7,10 +7,20 @@ use Livewire\Component;
 
 class ShowTeams extends Component
 {
+    public $teams;
+
+    public function mount()
+    {
+        $this->teams = Teams::all();
+    }
+
+    public function deeleteTeam($id){
+        Teams::whereId($id)->delete();
+        $this->teams = Teams::all();
+    }
 
     public function render()
     {
-        $teams = Teams::all();
-        return view('livewire.show-teams',compact('teams'));
+        return view('livewire.show-teams');
     }
 }
