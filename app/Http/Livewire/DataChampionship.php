@@ -7,10 +7,10 @@ use Livewire\Component;
 
 class DataChampionship extends Component
 {
-    public $championship;
+    public $championships;
 
-    public function mount(Championships $championship){
-        $this->championship = $championship;
+    public function mount(){
+        $this->championships = Championships::all();
     }
 
     public function render()

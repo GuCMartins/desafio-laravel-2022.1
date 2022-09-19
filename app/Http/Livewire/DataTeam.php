@@ -7,10 +7,10 @@ use Livewire\Component;
 
 class DataTeam extends Component
 {
-    public $team;
+    public $teams;
 
-    public function mount(Teams $team){
-        $this->team = $team;
+    public function mount(){
+        $this->teams = Teams::all();
     }
 
     public function render()

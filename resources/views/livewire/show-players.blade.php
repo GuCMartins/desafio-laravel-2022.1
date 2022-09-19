@@ -2,12 +2,16 @@
 @section('title','Players')
 
 @section('content')
-    <div>
-        <h1>Jogadores</h1>
-        @foreach($players as $player)
-            <tr>
-                @livewire('data-player', ['player' => $player], key($player->id))
-            </tr>    
-        @endforeach
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">Dashboard</div>
+
+                    <livewire:data-player></livewire:data-player>
+                </div>
+            </div>
+        </div>
     </div>
-@endsection    
+@endsection
+   

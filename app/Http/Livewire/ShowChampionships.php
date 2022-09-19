@@ -9,11 +9,7 @@ class ShowChampionships extends Component
 {
     public $championships;
 
-    public function mount(){
-        $this->championships = Championships::all();
-    }
-
-    public function deeleteChampionship($id){
+    public function deleteChampionship($id){
         Championships::whereId($id)->delete();
         $this->championships = Championships::all();
     }
@@ -21,6 +17,6 @@ class ShowChampionships extends Component
     public function render()
     {
         $championships = Championships::all();
-        return view('livewire.show-championships',compact('championships'));
+        return view('livewire.show-championships');
     }
 }

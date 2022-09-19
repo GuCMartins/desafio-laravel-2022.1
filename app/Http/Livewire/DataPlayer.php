@@ -7,10 +7,10 @@ use Livewire\Component;
 
 class DataPlayer extends Component
 {
-    public $player;
+    public $players;
 
-    public function mount(Players $player){
-        $this->player = $player;
+    public function mount(){
+        $this->players = Players::all();
     }
 
     public function render()

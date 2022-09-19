@@ -2,12 +2,15 @@
 @section('title','Championships')
 
 @section('content')
-    <div>
-        <h1>Campeonatos</h1>
-        @foreach($championships as $championship)
-            <tr>
-                @livewire('data-championship', ['championship' => $championship], key($championship->id))
-            </tr>    
-        @endforeach
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">Dashboard</div>
+
+                    <livewire:data-championship></livewire:data-championship>
+                </div>
+            </div>
+        </div>
     </div>
-@endsection    
+@endsection

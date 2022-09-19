@@ -13,7 +13,7 @@ class ShowPlayers extends Component
         $this->players = Players::all();
     }
 
-    public function deeletePlayer($id){
+    public function deletePlayer($id){
         players::whereId($id)->delete();
         $this->player = Players::all();
     }
