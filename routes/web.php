@@ -14,6 +14,7 @@ use App\Http\Livewire\EditChampionship;
 use App\Http\Livewire\DeleteChampionship;
 use App\Http\Livewire\RankingTeams;
 use App\Http\Livewire\DashboardChampionship;
+use App\Http\Livewire\Home;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -30,6 +31,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/home',Home::class);
 
 Route::get('/players',ShowPlayers::class);
 Route::get('/new-player',CreatePlayer::class);
