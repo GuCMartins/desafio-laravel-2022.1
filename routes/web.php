@@ -28,26 +28,26 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-Route::get('/home',Home::class);
+// Route::get('/home',Home::class);
 
-Route::get('/players',ShowPlayers::class);
-Route::get('/new-player',CreatePlayer::class);
-Route::get('/edit-player',EditPlayer::class);
-Route::get('/delete-player',DeletePlayer::class);
+// Route::get('/players',ShowPlayers::class);
+// Route::get('/new-player',CreatePlayer::class);
+// Route::get('/edit-player',EditPlayer::class);
+// Route::get('/delete-player',DeletePlayer::class);
 
-Route::get('/teams',ShowTeams::class);
-Route::get('/new-team',CreateTeam::class);
-Route::get('/edit-team',EditTeam::class);
-Route::get('/delete-team',DeleteTeam::class);
+// Route::get('/teams',ShowTeams::class);
+// Route::get('/new-team',CreateTeam::class);
+// Route::get('/edit-team',EditTeam::class);
+// Route::get('/delete-team',DeleteTeam::class);
 
-Route::get('/championships',ShowChampionships::class);
-Route::get('/new-championship',CreateChampionship::class);
-Route::get('/edit-championship',EditChampionship::class);
-Route::get('/delete-championship',DeleteChampionship::class);
+// Route::get('/championships',ShowChampionships::class);
+// Route::get('/new-championship',CreateChampionship::class);
+// Route::get('/edit-championship',EditChampionship::class);
+// Route::get('/delete-championship',DeleteChampionship::class);
 
-Route::get('/rankings',RankingTeams::class);
-Route::get('/dashboard',DashboardChampionship::class);
+// Route::get('/rankings',RankingTeams::class);
+// Route::get('/dashboard',DashboardChampionship::class);

@@ -2,15 +2,9 @@
 @section('title','Players')
 
 @section('content')
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-12">
-                <div class="card">
-                    <div class="card-header">Dashboard</div>
-
-                    <livewire:data-player></livewire:data-player>
-                </div>
-            </div>
+    <div class="max-w-6xl mx-auto">
+        <div class="flex justify-end m-2 p-2">
+            <x-jet-button wire:click="showPlayerModal">Criar</x-jet-button>
         </div>
     </div>
 @endsection

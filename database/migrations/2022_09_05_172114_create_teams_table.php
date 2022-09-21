@@ -21,8 +21,7 @@ return new class extends Migration
             $table->integer('points');
             $table->integer('wins');
             $table->integer('defeats');
-            $table->json('players_id');
-            $table->json('championship_id')->nullable();
+            $table->integer('championship_id')->nullable();
         });           
 
     }
