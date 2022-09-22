@@ -11,15 +11,10 @@ class Teams extends Model
 
     protected $fillable = [
         'name',
-        'motheland',
+        'motherland',
         'points',
         'wins',
         'defeats',
-    ];
-
-    protected $casts = [
-        'players_id' =>'array',
-        'champioship_id' =>'array',
     ];
 
     public function player(){

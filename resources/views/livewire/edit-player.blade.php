@@ -1,8 +1,3 @@
-@extends('layouts.app')
-@section('title','Edit Player')
-
-@section('content')
-    <div>
-        Hello;
-    </div>
-@endsection    
+<div>
+    {{-- Nothing in the world is as soft and yielding as water. --}}
+</div>

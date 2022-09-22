@@ -8,6 +8,8 @@ use Livewire\Component;
 
 class PlayerIndex extends Component
 {
+    public $showingPlayerModal = false;
+
     public $player;
     public $name;
     public $age;
@@ -15,6 +17,8 @@ class PlayerIndex extends Component
     public $wins;
     public $defeats;
     public $team_id;
+
+    public $isEditMode = false;
 
     protected $rules =[
         'name' => 'string|required',
@@ -96,7 +100,7 @@ class PlayerIndex extends Component
         session()->flash('message','Jogador atualizado com sucesso'); 
     }
 
-    public function deletePost($id)
+    public function deletePlayer($id)
     {
         $player = Players::findOrFail($id);
         $player->delete();
@@ -105,6 +109,9 @@ class PlayerIndex extends Component
 
     public function render()
     {
-        return view('livewire.edit-player');
+        return view('livewire.players-index', [
+            'players' => Players::all(),
+            'teams' =>Teams::all(),
+        ]);
     }
 }

@@ -21,8 +21,8 @@ return new class extends Migration
             $table->string('nationality');
             $table->integer('wins');
             $table->integer('defeats');
+            $table->unsignedBigInteger('team_id');
             $table->foreign('team_id')->references('id')->on('teams');
-            $table->integer('team_id')->nullable();
         });
     }
 

@@ -16,12 +16,11 @@ return new class extends Migration
         Schema::create('teams', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('name')->unique();
+            $table->string('name');
             $table->string('motherland');
             $table->integer('points');
             $table->integer('wins');
             $table->integer('defeats');
-            $table->integer('championship_id')->nullable();
         });           
 
     }
