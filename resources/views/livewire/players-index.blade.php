@@ -4,7 +4,7 @@
 @section('content')
     <div class="max-w-6xl mx-auto">
         <div class="flex justify-end m-2 p-2">
-            <button wire:click="showPlayerModal">Criar</button>
+            <button wire:click="showPlayerModal()">Criar</button>
         </div>
         <div class="m-2 p-2">
             <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
