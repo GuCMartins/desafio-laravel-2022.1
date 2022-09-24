@@ -2,13 +2,18 @@
 
 namespace App\Http\Livewire;
 
+use  Livewire\WithPagination;
 use App\Models\Players;
 use App\Models\Teams;
 use Livewire\Component;
 
 class PlayerIndex extends Component
 {
-    public $showingPlayerModal = false;
+    use WithPagination;
+
+    public $modalFormVisible = false;
+    public $PlayerDeleteModal = false;
+    public $modelId;
 
     public $player;
     public $name;
@@ -29,10 +34,20 @@ class PlayerIndex extends Component
         'team' => 'integer|required',
     ];
 
+    public function mount(){
+        $this->resetPage();
+    }
+
     public function showPlayerModal()
     {
         $this->reset();
-        $this->showingPlayerModal = true;
+        $this->modalFormVisible = true;
+    }
+
+    public function createPlayerModal(){
+        $this->resetValidation();
+        $this->reset();
+        $this->modalFormVisible = true;
     }
 
     public function storePlayer()
@@ -72,9 +87,15 @@ class PlayerIndex extends Component
     }
 
 
-    public function update()
+    public function updatePlayerModal($id)
     {
-        $this->player = Players::find($this->id);
+        $this->resetValidation();
+        $this->reset();
+
+        $this->modalFormVisible = true;
+        $this->modelId = $id;
+
+        $this->player = Players::find($this->modelId);
 
         $this->validate([
             'name' => 'string|required',
@@ -100,9 +121,14 @@ class PlayerIndex extends Component
         session()->flash('message','Jogador atualizado com sucesso'); 
     }
 
-    public function deletePlayer($id)
+    public function deletePlayerModal($id)
     {
-        $player = Players::findOrFail($id);
+        $this->modelId = $id;
+        $this->PlayerDeleteModal = true;
+    }
+
+    public function deletePlayer(){
+        $player = Players::findOrFail($this->modelId);
         $player->delete();
         $this->reset();
     }

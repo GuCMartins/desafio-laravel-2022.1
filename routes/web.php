@@ -25,10 +25,4 @@ Route::get('/players',PlayerIndex::class);
 Route::get('/teams',TeamsIndex::class);
 
 
-// Route::get('/championships',ShowChampionships::class);
-// Route::get('/new-championship',CreateChampionship::class);
-// Route::get('/edit-championship',EditChampionship::class);
-// Route::get('/delete-championship',DeleteChampionship::class);
-
-// Route::get('/rankings',RankingTeams::class);
-// Route::get('/dashboard',DashboardChampionship::class);
+Route::get('/championships',ChampionshipIndex::class);
