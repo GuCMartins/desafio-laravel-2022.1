@@ -11,9 +11,7 @@ class PlayerIndex extends Component
 {
     use WithPagination;
 
-    public $modalFormVisible = false;
-    public $PlayerDeleteModal = false;
-    public $modelId;
+    public $listeners = ['playerUpdated'=>'render'];
 
     public $player;
     public $name;
@@ -22,8 +20,6 @@ class PlayerIndex extends Component
     public $wins;
     public $defeats;
     public $team_id;
-
-    public $isEditMode = false;
 
     protected $rules =[
         'name' => 'string|required',
@@ -36,6 +32,15 @@ class PlayerIndex extends Component
 
     public function mount(){
         $this->resetPage();
+    }
+
+    private function resetInputFields(){
+        $this->name = '';
+        $this->age = '';
+        $this->nationality = '';
+        $this->wins = '';
+        $this->defeats = '';
+        $this->team = '';
     }
 
     public function showPlayerModal()
@@ -92,10 +97,7 @@ class PlayerIndex extends Component
         $this->resetValidation();
         $this->reset();
 
-        $this->modalFormVisible = true;
-        $this->modelId = $id;
-
-        $this->player = Players::find($this->modelId);
+        $this->player = Players::find($id);
 
         $this->validate([
             'name' => 'string|required',
@@ -121,14 +123,8 @@ class PlayerIndex extends Component
         session()->flash('message','Jogador atualizado com sucesso'); 
     }
 
-    public function deletePlayerModal($id)
-    {
-        $this->modelId = $id;
-        $this->PlayerDeleteModal = true;
-    }
-
-    public function deletePlayer(){
-        $player = Players::findOrFail($this->modelId);
+    public function deletePlayer($id){
+        $player = Players::findOrFail($id);
         $player->delete();
         $this->reset();
     }
