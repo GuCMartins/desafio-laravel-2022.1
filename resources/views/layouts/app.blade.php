@@ -8,6 +8,7 @@
     <link href="/dist/output.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://cdn.tailwindcss.com/%22%3E"></script>
     <title>@yield('title')</title>
     @livewireStyles
 </head>
